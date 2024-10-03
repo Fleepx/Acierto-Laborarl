@@ -1,0 +1,222 @@
+/* Reset de márgenes y padding */
+* {
+	margin: 0;
+	padding: 0;
+}
+  
+:root {
+	--azulPrincipal: blue;
+	--navbar-height: 150px;
+	--navbar-min-height: 60px;
+	--logo-height: 120px;
+	--logo-min-height: 50px;
+	--nombre-font-size: 2.5rem;
+	--nombre-min-font-size: 1rem;
+}
+  
+body {
+	padding-top: var(--navbar-height); /* Deja espacio para el navbar fijo */
+}
+.navbar-light {
+	width: 100vw;
+}
+.LogoNombre {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	padding-top: 2rem;
+	transition: padding-top 0.5s ease, padding-bottom 0.5s ease;
+}
+#navbar.scrolled .LogoNombre {
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+}
+
+  
+.logo {
+	height: var(--logo-height);
+	transition: height 0.3s ease ;
+	animation:pulso 0.5s ease ;
+}
+@keyframes pulso {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.2);
+	}
+	80% {
+		transform: scale(0.9);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+.Nombre {
+	color: var(--azulPrincipal);
+	font-size: var(--nombre-font-size);
+	transition: font-size 0.3s ease;
+}
+#Nav {
+	width: 100vw;
+
+}
+.Navegation {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	width: 50rem;
+}
+.collapse {
+	display: flex;
+	justify-content: end;
+}
+#navbar {
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: fixed;
+	top: 0;
+	z-index: 1000;
+	transition: height 0.1s ease, box-shadow 0.1s ease;
+}
+.redes {
+	transition: font-size 0.3s ease;
+	background-color: black;
+	color: white;
+}
+#navbar.scrolled .redes {
+	font-size: 0px;
+}  
+#navbar.scrolled {
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+#navbar.scrolled .logo {
+	height: var(--logo-min-height);
+}
+  
+#navbar.scrolled .Nombre {
+	font-size: var(--nombre-min-font-size);
+}
+#menu {
+	display: flex;
+	background-color: blueviolet;
+}
+.nav-link {
+	color: var(--azulPrincipal);
+}
+
+/*/////////////////////////////////////////////////////////////////////////*/
+/*//////////////////////CARRUSEL///////////////////////////////////////////*/
+/*/////////////////////////////////////////////////////////////////////////*/
+
+.carro1 {
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%), url(../imgs/abogada1.png);
+}
+.carro2 {
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%), url(../imgs/abogado2.jpg);
+	
+}
+.carro3 {
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%), url(../imgs/abogado3.jpeg);
+	
+}
+.carousel-item {
+	height: 30rem;
+	background-repeat: no-repeat;
+  	background-position: center;
+  	background-size:cover;
+
+
+}
+.carroText {
+	color: white;
+	height: 15rem;
+	width: 20rem;
+}
+
+/*/////////////////////////////////////////////////////////////////////////*/
+/*////////////////////DIFERENCIAS//////////////////////////////////////////*/
+/*/////////////////////////////////////////////////////////////////////////*/
+.container {
+	margin-bottom: 3rem;
+	background-color: blanchedalmond;
+}
+.titulo {
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+.difeTexto {
+	display: flex;
+	gap: 1rem;
+}
+h4 {
+	text-align: center;
+	margin-bottom: 2rem;
+}
+.icono{
+	font-size: 50px;
+	text-align: center;
+	margin: 1rem;
+}
+.difeContent {
+	width: 500px;
+}
+.textoDif {
+	background-color: aquamarine;
+	padding: 10px;
+}
+
+
+/*/////////////////////////////////////////////////////////////////////////*/
+/*////////////////////////SOLUCIONES///////////////////////////////////////*/
+/*/////////////////////////////////////////////////////////////////////////*/
+.solucion {
+	background-color: red;
+	width: 160px;
+	margin-bottom: 1rem;
+}
+.image {
+	width: 10rem;
+	cursor: pointer;
+	padding: 5px;
+}
+.img1, .img2 {
+    transition: filter 0.5s ease-out;
+    filter: grayscale(1);
+}
+.img1:hover,
+.img1:active {
+    filter: grayscale(0);
+}
+.img2:hover,
+.img2:active {
+    filter: grayscale(0);
+}
+.Separacion {
+	display: flex;
+	gap: 1rem;
+}
+.left-pane {
+	width: 50%;
+	padding: 20px;
+}
+.right-pane {
+	width: 50%;
+	display: flex;
+	justify-content: space-around;
+}
+
+
+
+
+
+/*/////////////////////////////////////////////////////////////////////////*/
+/*////////////////////////NOSOTROS/////////////////////////////////////////*/
+/*/////////////////////////////////////////////////////////////////////////*/
+.nosotros {
+	display: flex;
+
+}
