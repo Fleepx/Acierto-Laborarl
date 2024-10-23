@@ -9,21 +9,23 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,700;1,6..12,700&display=swap" rel="stylesheet">
+    <!-- FontsAwesome -->
     <script src="https://kit.fontawesome.com/76066ff5d0.js" crossorigin="anonymous"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./assets/css/styles.css" />
 
     <title>Acierto Laboral</title>
   </head>
+  
   <body>
     <!-- Menu Navegacion -->
-    <nav class="navbar navbar-expand-lg" id="top">
-      <div class="container-fluid" id="navbar">
-        <div class="redes">
-          <div class="redes">
-                <p>+569120240</p>
-          </div>
-        </div>
-        <div class="Navegation">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid" id="navBar">
+
 
           <!-- Logo y Nombre -->
           <div class="LogoNombre">
@@ -35,27 +37,26 @@
                 alt="LogoAciertoLaboral"
                 />
               </a>
-              <div>
-                  <h1 class="Nombre">ACIERTO</h1>
-                  <h1 class="Nombre">LABORAL</h1>
+              <div class="Nombres">
+                  <h1 class="Nombre acierto">ACIERTO</h1>
+                  <h1 class="Nombre laboral">LABORAL</h1>
               </div>
           </div>
-
           <!-- Botón Hamburguesa -->
-          <button class="navbar-toggler me-5" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
           </button>
-
+          
           <!-- Menú de Navegación -->
-          <div class="collapse navbar-collapse bg-success" id="navbarNavAltMarkup">
-                <div class="navbar-nav bg-danger">
-                  <a class="nav-link active" aria-current="page" href="#top">Inicio</a>
-                  <a class="nav-link" href="#Nosotros">Nosotros</a>
-                  <a class="nav-link" href="#Soluciones">Soluciones</a>
-                  <a class="nav-link" href="#Contacto">Contactanos</a>
-                </div>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ">
+              <a class="nav-link active" aria-current="page" href="#top">Inicio</a>
+              <a class="nav-link" href="#Soluciones">Soluciones</a>
+              <a class="nav-link" href="#Nosotros">Nosotros</a>
+              <a class="nav-link" href="#Contacto">Contactanos</a>
+            </div>
           </div>
-        </div>
+
       </div>
     </nav>
 
@@ -91,12 +92,14 @@
 
     <!-- Diferencias -->
       <div class="container" id="Diferencias">
-        <h1 class="titulo">¿Qué nos diferencia?</h1>
-          <div class="difeTexto">
+        <div class="difeTexto">
 
+            <h1 class="titulo">¿Qué nos diferencia?</h1>
             <div class="difeContent">
-              <div class="icono">
-                <i class="fa-solid fa-medal icono"></i>
+              <div class="contorno">
+                <div class="iconos">
+                  <i class="fa-solid fa-medal fa-2xl"></i>
+                </div>
               </div>
               <div class="textoDif">
                 <h4>Calidad</h4>
@@ -111,11 +114,12 @@
                 </div>
               </div>
 
-
-              <div class="difeContent">
-                <div class="icono">
-                  <i class="fa-solid fa-circle-check icono"></i>
+            <div class="difeContent">
+              <div class="contorno">
+                <div class="iconos">
+                  <i class="fa-solid fa-circle-check fa-2xl"></i>
                 </div>
+              </div>
                 <div class="textoDif">
                   <h4>Experiencia</h4>
                   <p>Presentamos una 
@@ -129,10 +133,11 @@
                 </div>
               </div>
 
-
-              <div class="difeContent">
-              <div class="icono">
-                <i class="fa-solid fa-user icono"></i>
+            <div class="difeContent">
+              <div class="contorno">
+                <div class="iconos">
+                  <i class="fa-solid fa-user fa-2xl"></i>
+                </div>
               </div>
               <div class="textoDif">
                 <h4>Personalización</h4>
@@ -148,8 +153,10 @@
               </div>
 
             <div class="difeContent">
-              <div class="icono">
-                <i class="fa-solid fa-comments icono"></i>
+              <div class="contorno">
+                <div class="iconos">
+                  <i class="fa-solid fa-comments fa-2xl"></i>
+                </div>
               </div>
               <div class="textoDif">
                 <h4>Comunicación</h4>
@@ -179,7 +186,7 @@
                 <p>Evaluaciones Psicolaborales</p>
               </div>
               <div>
-                <img id="img1" class="image" src="./assets/imgs/persona.png" alt="solucion">
+                <img id="Psicolaborales" class="image" src="./assets/imgs/persona.png" alt="solucion">
               </div>
             </div>
             
@@ -188,30 +195,12 @@
               <p>Asesorías de Empleabilidad</p>
             </div>
             <div>
-              <img id="img2" class="image" src="./assets/imgs/persona2.png" alt="solucion">
+              <img id="Empleabilidad" class="image" src="./assets/imgs/persona2.png" alt="solucion">
             </div>
           </div>
         </div>
       </div>
       </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     <!-- Nosotros -->    

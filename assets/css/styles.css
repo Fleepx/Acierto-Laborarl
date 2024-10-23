@@ -6,37 +6,52 @@
   
 :root {
 	--azulPrincipal: blue;
-	--navbar-height: 150px;
+	--navbar-height: 120px;
 	--navbar-min-height: 60px;
-	--logo-height: 120px;
-	--logo-min-height: 50px;
+	--logo-height: 110px;
+	--logo-min-height: 60px;
 	--nombre-font-size: 2.5rem;
-	--nombre-min-font-size: 1rem;
+	--nombre-min-font-size: 1.5rem;
 }
   
 body {
 	padding-top: var(--navbar-height); /* Deja espacio para el navbar fijo */
 }
-.navbar-light {
-	width: 100vw;
-}
+
+/*/////////////////////////////////////////////////////////////////////////*/
+/*//////////////////////LOGO///////////////////////////////////////////////*/
+/*/////////////////////////////////////////////////////////////////////////*/
+
 .LogoNombre {
+	font-family: "Nunito Sans", sans-serif;
 	display: flex;
 	align-items: center;
 	gap: 1rem;
-	padding-top: 2rem;
+	height: var(--logo-height);
 	transition: padding-top 0.5s ease, padding-bottom 0.5s ease;
 }
-#navbar.scrolled .LogoNombre {
-	padding-top: 0.5rem;
-	padding-bottom: 0.5rem;
-}
-
-  
 .logo {
 	height: var(--logo-height);
 	transition: height 0.3s ease ;
 	animation:pulso 0.5s ease ;
+}
+.Nombres {
+	display: flex;
+	flex-direction: column;
+}
+.Nombre {
+	margin: 0;
+	line-height: 1;
+	display: inline-block;
+	color: var(--azulPrincipal);
+	font-size: var(--nombre-font-size);
+	transition: font-size 0.3s ease;
+}
+.acierto { 
+	letter-spacing: 4px;
+}
+.laboral {
+	letter-spacing: 1px;
 }
 @keyframes pulso {
 	0% {
@@ -52,60 +67,47 @@ body {
 		transform: scale(1);
 	}
 }
-.Nombre {
-	color: var(--azulPrincipal);
-	font-size: var(--nombre-font-size);
-	transition: font-size 0.3s ease;
-}
-#Nav {
-	width: 100vw;
 
-}
-.Navegation {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
-	width: 50rem;
-}
-.collapse {
-	display: flex;
-	justify-content: end;
-}
-#navbar {
+/*/////////////////////////////////////////////////////////////////////////*/
+/*//////////////////////BARRA NAVEGACION///////////////////////////////////*/
+/*/////////////////////////////////////////////////////////////////////////*/
+
+#navBar {
 	background-color: white;
 	display: flex;
-	flex-direction: column;
 	align-items: center;
+	justify-content: space-between;
 	position: fixed;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
 	top: 0;
 	z-index: 1000;
 	transition: height 0.1s ease, box-shadow 0.1s ease;
 }
-.redes {
-	transition: font-size 0.3s ease;
-	background-color: black;
-	color: white;
-}
-#navbar.scrolled .redes {
-	font-size: 0px;
-}  
-#navbar.scrolled {
-	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
-}
-
-#navbar.scrolled .logo {
-	height: var(--logo-min-height);
-}
-  
-#navbar.scrolled .Nombre {
-	font-size: var(--nombre-min-font-size);
-}
-#menu {
-	display: flex;
-	background-color: blueviolet;
+.collapse {
+	 
 }
 .nav-link {
 	color: var(--azulPrincipal);
+}
+#navBar.scrolled .LogoNombre {
+	height: var(--logo-min-height);
+}
+#navBar.scrolled {
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+#navBar.scrolled .logo {
+	height: var(--logo-min-height);
+}
+#navBar.scrolled .Nombre {
+	font-size: var(--nombre-min-font-size);
+	letter-spacing: 0px;
+}
+#navBar.scrolled .acierto { 
+	letter-spacing: 3px;
+}
+#navBar.scrolled .laboral {
+	letter-spacing: 1px;
 }
 
 /*/////////////////////////////////////////////////////////////////////////*/
@@ -128,13 +130,13 @@ body {
 	background-repeat: no-repeat;
   	background-position: center;
   	background-size:cover;
-
-
 }
 .carroText {
 	color: white;
 	height: 15rem;
 	width: 20rem;
+	margin-top: 5rem;
+	margin-left: 5rem;
 }
 
 /*/////////////////////////////////////////////////////////////////////////*/
@@ -147,28 +149,52 @@ body {
 .titulo {
 	margin-top: 1rem;
 	margin-bottom: 1rem;
+	width: 300px;
+	align-self: center;
+}
+.difeContent {
+	width: 300px;
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem;
+    transition: all 1s ease;
+}
+.contorno {
+	border-radius: 100%;
+    border: #5a6ec5ad 10px;
+    border-style: double;
+    color: wheat;
+}
+.iconos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    width: 100px;
+    background-color: var(--azulPrincipal);
+    border-radius: 100%;
+    transition: transform 0.3s ease;
+}
+.iconos:hover {
+    transform: scale(1.2);
 }
 .difeTexto {
 	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 	gap: 1rem;
 }
 h4 {
 	text-align: center;
 	margin-bottom: 2rem;
 }
-.icono{
-	font-size: 50px;
-	text-align: center;
-	margin: 1rem;
-}
-.difeContent {
-	width: 500px;
-}
 .textoDif {
-	background-color: aquamarine;
+	background-color: white;
 	padding: 10px;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 }
-
 
 /*/////////////////////////////////////////////////////////////////////////*/
 /*////////////////////////SOLUCIONES///////////////////////////////////////*/

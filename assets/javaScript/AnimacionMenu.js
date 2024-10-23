@@ -1,11 +1,11 @@
 window.addEventListener('scroll', function() {
-    const navbar = document.getElementById('navbar');
+    const navBar = document.getElementById('navBar');
     const scrollY = window.scrollY;
   
 
     if (scrollY > 60) { 
-      navbar.classList.add('scrolled');
+      navBar.classList.add('scrolled');
     } else {
-      navbar.classList.remove('scrolled');
+      navBar.classList.remove('scrolled');
     }
   });
