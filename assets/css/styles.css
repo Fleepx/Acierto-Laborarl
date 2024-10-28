@@ -6,9 +6,9 @@
   
 :root {
 	--azulPrincipal: blue;
-	--navbar-height: 120px;
+	--navbar-height: 100px;
 	--navbar-min-height: 60px;
-	--logo-height: 110px;
+	--logo-height: 90px;
 	--logo-min-height: 60px;
 	--nombre-font-size: 2.5rem;
 	--nombre-min-font-size: 1.5rem;
@@ -72,20 +72,37 @@ body {
 /*//////////////////////BARRA NAVEGACION///////////////////////////////////*/
 /*/////////////////////////////////////////////////////////////////////////*/
 
+.navbar {
+	background-color: white;
+}
 #navBar {
 	background-color: white;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	position: fixed;
+	width: 100vw;
 	padding-top: 1rem;
 	padding-bottom: 1rem;
 	top: 0;
 	z-index: 1000;
 	transition: height 0.1s ease, box-shadow 0.1s ease;
 }
+@media (max-width: 768px) {
+    #navBar {
+        position: fixed;
+        top: 0;
+        width: 100vw;
+        height: 10vh; /* Ajusta según la altura deseada */
+    }
+}
+.navbar-toggler {
+	background-color: white;
+}
 .collapse {
-	 
+	justify-content: end;
+	margin-right: 2rem;
+	background-color: white;
 }
 .nav-link {
 	color: var(--azulPrincipal);
