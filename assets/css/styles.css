@@ -89,14 +89,7 @@ body {
 	z-index: 1000;
 	transition: height 0.1s ease, box-shadow 0.1s ease;
 }
-@media (max-width: 768px) {
-    #navBar {
-        position: fixed;
-        top: 0;
-        width: 100vw;
-        height: 10vh; /* Ajusta según la altura deseada */
-    }
-}
+
 .navbar-toggler {
 	background-color: white;
 }
